@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muslim/mvc/view/widgets/quran/sura_item.dart';
 import '../../../core/constant.dart';  // Assuming `primaryColor` and `quranDetails` are defined here
 
 class QuranScreen extends StatelessWidget {
@@ -60,34 +61,7 @@ class QuranScreen extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: quranDetails.length, // Number of surahs
                       itemBuilder: (context, index) {
-                        return Table(
-                          border: TableBorder.all(
-                            color: primaryColor,
-                            width: 1.5,
-                          ),
-                          children: [
-                            TableRow(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    "${quranDetails[index]["id"]}", // Surah number
-                                    textAlign: TextAlign.center,
-                                    style: Theme.of(context).textTheme.titleMedium,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    "${quranDetails[index]["name"]} (${quranDetails[index]["total_verses"]})", // Surah name with total verses
-                                    textAlign: TextAlign.center,
-                                    style: Theme.of(context).textTheme.titleMedium,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        );
+                        return SuraItem(index: index);
                       },
                     ),
                   ),
