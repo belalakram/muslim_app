@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muslim/core/azkar_data.dart';
+import 'package:muslim/mvc/view/screens/ahadith_screen.dart';
 import 'package:muslim/mvc/view/screens/azkar_details.dart';
 import 'package:muslim/mvc/view/screens/azkar_screen.dart';
 import 'package:muslim/mvc/view/screens/landing_screen.dart';
@@ -8,6 +9,7 @@ import 'package:muslim/mvc/view/screens/quran_screen.dart';
 import 'package:muslim/mvc/view/screens/tasbih.dart';
 
 import 'core/constant.dart';
+import 'mvc/view/screens/detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,6 +54,8 @@ class MyApp extends StatelessWidget {
         AzkarScreen.routeName : (context)=>  AzkarScreen(),
         AzkarDetails.routeName : (context)=>  AzkarDetails(),
         Tasbih.routeName : (context)=>  Tasbih(),
+        AhadithScreen.routeName : (context)=>  AhadithScreen(),
+        '/detail': (context) => DetailScreen(),
 
 
 

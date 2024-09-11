@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muslim/mvc/view/screens/ahadith_screen.dart';
 import 'package:muslim/mvc/view/screens/azkar_screen.dart';
 import 'package:muslim/mvc/view/screens/quran_screen.dart';
 import 'package:muslim/mvc/view/screens/tasbih.dart';
@@ -59,7 +60,7 @@ class LandingScreen extends StatelessWidget {
                     name: 'assets/ahadethicon 1.png',
                     text: 'الاحاديث',
                     onPress: () {
-                      // Add functionality here if needed
+                      Navigator.pushNamed(context, AhadithScreen.routeName);
                     },
                   ),
                   LandingItem(
