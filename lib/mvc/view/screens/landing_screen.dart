@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:muslim/mvc/view/screens/azkar_screen.dart';
 import 'package:muslim/mvc/view/screens/quran_screen.dart';
+import 'package:muslim/mvc/view/screens/tasbih.dart';
 import 'package:muslim/mvc/view/widgets/landing/landing_item.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -22,9 +24,7 @@ class LandingScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: const Text("مسلم"),
-            centerTitle: true,
             leading: Image.asset("assets/dark_mode.png"),
-            backgroundColor: Colors.white.withOpacity(0.5),
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -45,6 +45,8 @@ class LandingScreen extends StatelessWidget {
                     name: 'assets/tasbehicon 1.png',
                     text: 'التسبيح',
                     onPress: () {
+                      Navigator.pushNamed(context, Tasbih.routeName);
+
                     },
                   ),
                 ],
@@ -64,7 +66,8 @@ class LandingScreen extends StatelessWidget {
                     name: 'assets/azkaricon 1.png',
                     text: 'اذكار',
                     onPress: () {
-                      // Add functionality here if needed
+                      Navigator.pushNamed(context, AzkarScreen.routeName);
+
                     },
                   ),
                 ],
